@@ -14,3 +14,24 @@ body {
     background: black;
     color: white;
 }
+header, section, footer {
+    display: flex;
+    justify-content: center;
+    .content {
+        display: flex;
+        width: 100%;
+        max-width: 1920px;
+    }
+}
+header,footer {
+    height: 10dvh;
+}
+main {
+    height: auto;
+    min-height: 80dvh;
+}
+section, footer {
+    .content {
+        justify-content: center;
+    }
+}
