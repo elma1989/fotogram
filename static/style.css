@@ -20,8 +20,8 @@ html {
     font-size: 10px;
 }
 body {
-    font-size: 1.6rem;
-    background: black;
+    font-size: 2rem;
+    background: #000060;
     color: white;
     font-family: Raleway;
 }
@@ -36,15 +36,23 @@ header, section, footer {
 }
 header,footer {
     height: 10dvh;
+    background: #000040;
 }
+
 main {
     height: auto;
     min-height: 80dvh;
+    .content {
+        padding: 0 160px;
+    }
 }
 section, footer {
     .content {
         justify-content: center;
     }
+}
+footer .content {
+    align-items: center;
 }
 /* #endregion */
 h1 {
@@ -56,6 +64,7 @@ h1 {
     .content {
         height: 100%;
         align-items: center;
+        gap: 16px;
         img {
             width: 100px;
             height: 100px;
