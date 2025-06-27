@@ -1,3 +1,13 @@
+/* #region global, header, main, footer */
+@font-face {
+    font-family: Raleway;
+    src: url(fonts/Raleway-Regular.ttf);
+}
+@font-face {
+    font-family: Raleway;
+    src: url(fonts/Raleway-Bold.ttf);
+    font-weight: bold;
+}
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +23,7 @@ body {
     font-size: 1.6rem;
     background: black;
     color: white;
+    font-family: Raleway;
 }
 header, section, footer {
     display: flex;
@@ -33,5 +44,23 @@ main {
 section, footer {
     .content {
         justify-content: center;
+    }
+}
+/* #endregion */
+h1 {
+    font-size: 4rem;
+    margin-top: 16px;
+}
+#foto-content {
+    height: 70dvh;
+    .content {
+        height: 100%;
+        align-items: center;
+        img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            object-position: center;
+        }
     }
 }
