@@ -1,5 +1,7 @@
 export function renderSingleMiniPic(file, alt) {
     return /*html*/`
-        <img src="${file}" alt="${alt}">
+        <div class="img-wrapper">
+            <img src="${file}" alt="${alt}">
+        </div>
     `
 }

@@ -1,10 +1,65 @@
 {
     "path": "img/pics/",
     "pics": [
-        {
+        {   
+            "ID": 1,
             "file": "green_nature_01.jpg",
             "alt": "Test",
             "caption": "Grüne Naturlandschaft mit Bergen"
+        },
+        {   
+            "ID": 2,
+            "file": "plant_01.jpg",
+            "alt": "Test",
+            "caption": "Entstehung einer Pflanze"
+        },
+        {
+            "ID": 3,
+            "file": "tree_01.jpg",
+            "alt": "Test",
+            "caption": "Eine extreme Eiche"
+        },
+        {   
+            "ID": 4,
+            "file": "green_nature_02.jpg",
+            "alt": "Test",
+            "caption": "Stra&szlig; durch die Natur"
+        },
+        {   
+            "ID": 5,
+            "file": "mountain_01.jpg",
+            "alt": "Test",
+            "caption": "Eine Berglandschaft"
+        },
+        {   
+            "ID": 6,
+            "file": "dessert_01.jpg",
+            "alt": "Test",
+            "caption": "Eine W&uuml;stenlandschaft"
+        },
+        {   
+            "ID": 7,
+            "file": "sunset_01.jpg",
+            "alt": "Test",
+            "caption": "Eine fantastischer Sonnenuntergang"
+        },
+        {   
+            "ID": 8,
+            "file": "water_01.jpg",
+            "alt": "Test",
+            "caption": "Das unendliche Meer"
+        },
+        {   
+            "ID": 9,
+            "file": "flower_01.jpg",
+            "alt": "Test",
+            "caption": "Eine Blume"
+        },
+        {   
+            "ID": 10,
+            "file": "mountain_02.jpg",
+            "alt": "Test",
+            "caption": "Dolomitenberge"
         }
     ]
 }
