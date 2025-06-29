@@ -64,24 +64,29 @@ h1 {
     .content {
         height: 100%;
         align-items: center;
-        gap: 8px;
-        .img-wrapper{
+        .fotoarea {
             display: flex;
             justify-content: center;
-            align-items: center;
-            width: 110px;
-            height: 110px;
-            img {
-                width: 100px;
-                height: 100px;
-                object-fit: cover;
-                object-position: center center;
-                border-radius: 16px;
-                cursor: pointer;
-                transition: transform 300ms;
-            }
-            img:hover {
-                transform:scale(1.1);
+            flex-wrap: wrap;
+            gap: 8px;
+            .img-wrapper{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 110px;
+                height: 110px;
+                img {
+                    width: 100px;
+                    height: 100px;
+                    object-fit: cover;
+                    object-position: center center;
+                    border-radius: 16px;
+                    cursor: pointer;
+                    transition: transform 300ms;
+                }
+                img:hover {
+                    transform:scale(1.1);
+                }
             }
         }
     }
