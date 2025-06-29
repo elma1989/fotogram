@@ -1,4 +1,4 @@
-import { renderSingleMiniPic } from "./template.js";
+import { renderSingleMiniPic, renderSingleCardPic } from "./template.js";
 
 const refOverlay = document.querySelector('.overlay');
 
@@ -21,12 +21,33 @@ async function renderFotos() {
 }
 
 async function renderFotoCard(index) {
-    toggleOverlay();
+    const overlay = document.querySelector('.overlay');
+    const refFotocard = document.querySelector('.fotocard-content');
+    const response = await fetch('static/picdata.json');
+    const picdata = await response.json();
+    
+    if (overlay.classList.contains('d-none')) {
+        toggleOverlay();
+    }
+
+    refFotocard.addEventListener('click', e => {
+        e.stopPropagation();
+    });
+    refFotocard.innerHTML = renderSingleCardPic(picdata.path + picdata.pics[index].file, picdata.pics[index].alt, picdata.pics[index].caption, index+1, picdata.pics.length);    
+    const arrows = document.querySelectorAll('.nav-arrows img');
+    if (index == 0) {
+        arrows[0].classList.add('d-hide');
+    }
+    if (index == picdata.pics.length - 1) {
+        arrows[1].classList.add('d-hide');
+    }
+    arrows[0].addEventListener('click', () => {renderFotoCard(index-1);});
+    arrows[1].addEventListener('click', () => {renderFotoCard(index+1);});
 }
 
 
 function toggleOverlay() {
-    console.log(document.querySelector('.overlay').classList.toggle('d-none'));
+    document.querySelector('.overlay').classList.toggle('d-none');
 }
 
 renderFotos();
