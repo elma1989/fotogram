@@ -5,3 +5,12 @@ export function renderSingleMiniPic(file, alt, index) {
         </div>
     `
 }
+
+export function renderSingleCardPic (file, alt, caption) {
+    return /*html*/`
+        <figure>
+            <img src="${file}" alt="${alt}">
+            <figcaption>${caption}</figcaption>
+        </figure>
+    `
+}
