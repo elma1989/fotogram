@@ -59,6 +59,22 @@ h1 {
     font-size: 4rem;
     margin-top: 16px;
 }
+
+
+.overlay {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    background: rgba(0,0,0,0.5);
+}
+
+.d-none {
+    display: none;
+}
+
 #foto-content {
     height: 70dvh;
     .content {
