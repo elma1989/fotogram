@@ -140,7 +140,7 @@ h1 {
 
 #foto-content {
     height: auto;
-    min-height: 70dvh;
+    min-height: 65dvh;
     .content {
         height: 100%;
         align-items: center;

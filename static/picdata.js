@@ -19,7 +19,7 @@ export const picdata = {
         {
             file : 'green_nature_02.jpg',
             alt : 'Eine malerische Landstraße schlängelt sich durch sanfte, grüne Hügel im goldenen Licht der untergehenden Sonne – typisch für die romantische Landschaft der Bourgogne',
-            caption : 'Stra&szlig;e durch die Natur'
+            caption : 'Straße durch die Natur'
         },
         {
             file : 'mountain_01.jpg',
@@ -29,7 +29,7 @@ export const picdata = {
         {
             file : 'dessert_01.jpg',
             alt : 'A weite Wüüstn mit oana einzigen, gradn Straße, de si bis zum Horizont zogn tuat. Ringsum nur Sand, Staub und karge Hügel – a staade, endlose Weite wia aus am anderen Erdteil.',
-            caption : 'Eine W&uuml;stenlandschaft'
+            caption : 'Eine Wüstenlandschaft'
         },
         {
             file : 'sunset_01.jpg',

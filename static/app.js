@@ -31,15 +31,57 @@ function renderFotoCard(index) {
         e.stopPropagation();
     });
     refFotocard.innerHTML = renderSingleCardPic(picdata.path + picdata.pics[index].file, picdata.pics[index].alt, picdata.pics[index].caption, index+1, picdata.pics.length);    
+    
+    const img = document.querySelector('.fotocard-content figure img');
+    const caption = document.querySelector('.fotocard-content figure figcaption');
     const arrows = document.querySelectorAll('.nav-arrows img');
+    const counter = document.querySelector('.nav-arrows span span');
+    console.log(counter);
+
     if (index == 0) {
         arrows[0].classList.add('d-hide');
     }
     if (index == picdata.pics.length - 1) {
         arrows[1].classList.add('d-hide');
     }
-    arrows[0].addEventListener('click', () => {renderFotoCard(index-1);});
-    arrows[1].addEventListener('click', () => {renderFotoCard(index+1);});
+    arrows[0].addEventListener('click', () => {
+        if (index > 0) {
+            index--;
+            if (index == 0) {
+                arrows[0].classList.add('d-hide');
+            } else {
+                arrows[0].classList.remove('d-hide');
+            }
+            if (index == picdata.pics.length - 1) {
+                arrows[1].classList.add('d-hide');
+            } else {
+                arrows[1].classList.remove('d-hide');
+            }
+            img.setAttribute('src', picdata.path + picdata.pics[index].file);
+            img.setAttribute('alt', picdata.pics[index].alt);
+            caption.textContent = picdata.pics[index].caption;
+            counter.textContent = index + 1;
+        }
+    });
+    arrows[1].addEventListener('click', () => {
+        if (index < picdata.pics.length - 1) {
+            index++;
+            if (index == 0) {
+                arrows[0].classList.add('d-hide');
+            } else {
+                arrows[0].classList.remove('d-hide');
+            }
+            if (index == picdata.pics.length - 1) {
+                arrows[1].classList.add('d-hide');
+            } else {
+                arrows[1].classList.remove('d-hide');
+            }
+            img.setAttribute('src', picdata.path + picdata.pics[index].file);
+            img.setAttribute('alt', picdata.pics[index].alt);
+            caption.textContent = picdata.pics[index].caption;
+            counter.textContent = index + 1;
+        }
+    });
 }
 
 
