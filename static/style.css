@@ -37,13 +37,19 @@ header, section, footer {
 header,footer {
     height: 10dvh;
     background: #000040;
+    @media (max-width: 500px) {
+        height: 5dvh;
+    }
 }
 
 main {
     height: auto;
     min-height: 80dvh;
     .content {
-        padding: 0 160px;
+        padding: 0 clamp(16px, 11dvw, 160px);
+    }
+    @media (max-width: 500px) {
+        min-height: 90dvh;
     }
 }
 section, footer {
@@ -57,7 +63,16 @@ footer .content {
 /* #endregion */
 h1 {
     font-size: 4rem;
-    margin-top: 16px;
+    margin-top: 32px;
+    @media (max-width: 700px) {
+        font-size: 3rem;
+    }
+    @media (max-width: 500px) {
+        font-size: 2rem;
+    }
+    @media (max-width: 350px) {
+        font-size: 1.6rem;
+    }
 }
 
 
@@ -67,21 +82,36 @@ h1 {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100dvw;
+    width: 100%;
     height: 100dvh;
     background: rgba(0,0,0,0.5);
     .fotocard-content {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         height: 100dvh;
         padding: 24px;
         background: #000060;
         border-radius: 50px;
-        img {
-            height: 80dvh;
-            border-radius: 16px;
-            object-fit: cover;
-            object-position: center, center;
+        figure {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img {
+                height: 80dvh;
+                border-radius: 16px;
+                object-fit: cover;
+                object-position: center, center;
+                @media (max-width: 880px) {
+                    height: 60dvh;
+                }
+                @media (max-width: 700px) {
+                    height: 40dvh;  
+                }
+                @media (max-width: 500px) {
+                    height: 20dvh;
+                }
+            }
         }
         .nav-arrows {
             display: flex;
@@ -131,6 +161,15 @@ h1 {
                 }
                 img:hover {
                     transform:scale(1.1);
+                }
+                @media (max-width: 500px) {
+                    width: 55px;
+                    height: 55px;
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 8px;
+                    }
                 }
             }
         }
