@@ -1,11 +1,10 @@
+import { picdata } from "./picdata.js";
 import { renderSingleMiniPic, renderSingleCardPic } from "./template.js";
 
 const refOverlay = document.querySelector('.overlay');
 
-async function renderFotos() {
+function renderFotos() {
     const refContent = document.querySelector('.fotoarea');
-    const response = await fetch('static/picdata.json');
-    const picdata = await response.json();
     refContent.innerHTML = "";
     for (let i = 0; i < picdata.pics.length; i++) {
         refContent.innerHTML += renderSingleMiniPic(picdata.path + picdata.pics[i].file, picdata.pics[i].alt, i+1);
@@ -20,11 +19,9 @@ async function renderFotos() {
     );
 }
 
-async function renderFotoCard(index) {
+function renderFotoCard(index) {
     const overlay = document.querySelector('.overlay');
     const refFotocard = document.querySelector('.fotocard-content');
-    const response = await fetch('static/picdata.json');
-    const picdata = await response.json();
     
     if (overlay.classList.contains('d-none')) {
         toggleOverlay();
