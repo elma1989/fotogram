@@ -13,9 +13,9 @@ export function renderSingleCardPic (file, alt, caption, index, total) {
             <figcaption>${caption}</figcaption>
         </figure>
         <div class="nav-arrows">
-            <img src="../img/left.svg">
+            <img src="img/left.svg">
             <span>${index} von ${total}</span>
-            <img src="../img/right.svg">
+            <img src="img/right.svg">
         </div>
     `
 }
