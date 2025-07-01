@@ -137,6 +137,11 @@ h1 {
             }
         }
     }
+    @media (max-width: 800px) {
+        .fotocard-content{
+            width: 80%;
+        }
+    }
     @media (max-width: 500px) {
         padding-top: 5dvh;
         .fotocard-content {
