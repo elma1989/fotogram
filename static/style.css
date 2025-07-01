@@ -163,10 +163,10 @@ h1 {
 
 #foto-content {
     height: auto;
-    min-height: 75dvh;
+    min-height: 60dvh;
     .content {
         height: auto;
-        min-height: 75dvh;
+        min-height: 60dvh;
         align-items: center;
         .fotoarea {
             display: flex;
