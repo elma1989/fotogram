@@ -134,12 +134,9 @@ h1 {
                 cursor: pointer;
             }
         }
-    }
-}
-
-@media (max-width: 400px) {
-    .content, .fotocard-content {
-        width: 280px;
+        @media (max-width: 400px) {
+            width: 260px;
+        }
     }
 }
 
