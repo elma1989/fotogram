@@ -119,6 +119,7 @@ h1 {
                 }
             }
             figcaption {
+                align-self: flex-start;
                 text-align: left;
             }
         }

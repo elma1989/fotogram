@@ -36,7 +36,6 @@ function renderFotoCard(index) {
     const caption = document.querySelector('.fotocard-content figure figcaption');
     const arrows = document.querySelectorAll('.nav-arrows img');
     const counter = document.querySelector('.nav-arrows span span');
-    console.log(counter);
 
     if (index == 0) {
         arrows[0].classList.add('d-hide');
